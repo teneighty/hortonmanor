@@ -23,9 +23,10 @@ body {
 }
 h1 {
     font-size: 4em; 
+    padding: 0 0 20px 0;
 }
 p {
-    font-size: 2em;
+    font-size: 3em;
 }
 #home {
     text-align: center;
@@ -73,10 +74,6 @@ p {
     color: #000;
 }
 
-#menu li:hover{
-    background: rgba(255,255,255, 0.8);
-}
-
 #menu li a,
 #menu li.active a{
     padding: 9px 18px;
@@ -107,17 +104,28 @@ p {
     margin: 10px auto;
     border: #ccc solid 1px;
     border-width: 1px 0;
-    padding: 0 0 10px 0;
+    padding: 40px 0;
+}
+
+#banner p {
+    padding: 10px 0 0 0;
+    font-size: 0.6em;
 }
 
 #subtitle {
     background-color: #FFF;
+    font-weight: bold;
     font-size: 1.5em;
-    padding: 0px 0;
+    padding: 20px 0;
     margin: 5px 0;
     border: #ccc solid 1px;
     border-width: 1px 0;
     vertical-align: center;
+}
+
+#subtitle p {
+    padding: 15px 0 0 0;
+    font-size: 0.6em;
 }
 
 #home h1 {
@@ -140,11 +148,20 @@ p {
 }
 
 #aboutSection p, #listenSection p, #pricingSection p, #contactSection p {
-    font-size: 0.98em;
+    font-size: 1.2em;
 }
 
 #pricingSection .underscore {
     text-decoration: underline;
+}
+
+#pricingSection .block {
+    float: left;
+    width: 50%;
+}
+
+#pricingSection .clear {
+    clear: left;
 }
 
 #contactSection a {
