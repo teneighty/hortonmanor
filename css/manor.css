@@ -1,0 +1,152 @@
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+a {
+    text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+    text-transform: uppercase;
+}
+body {
+    font-family: arial,helvetica;
+    color: #333;
+    color: rgba(0,0,0,0.5);
+}
+h1 {
+    font-size: 4em; 
+}
+p {
+    font-size: 2em;
+}
+#home {
+    text-align: center;
+}
+.section {
+    z-index: 10;
+}
+
+.section h1, .section p {
+    width: 75%;
+    min-width: 75%;
+    margin: 0 auto;
+}
+.section p {
+    padding: 0 0 20px 0;
+}
+#menu {
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+#menu li {
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    background:#fff;
+    background: rgba(255,255,255, 0.5);
+    margin: 0 auto;
+}
+
+#menu li.active{
+    background:#666;
+    background: rgba(0,0,0, 0.5);
+    color: #fff;
+}
+
+#menu li a{
+    text-decoration:none;
+    color: #000;
+}
+
+#menu li.active a:hover{
+    color: #000;
+}
+
+#menu li:hover{
+    background: rgba(255,255,255, 0.8);
+}
+
+#menu li a,
+#menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+
+#menu li.active a{
+    color: #fff;
+}
+
+#menu {
+    background-color: #FFF;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 40px;
+    z-index: 1000;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
+#home {
+    text-transform: uppercase;
+}
+
+#banner {
+    margin: 10px auto;
+    border: #ccc solid 1px;
+    border-width: 1px 0;
+    padding: 0 0 10px 0;
+}
+
+#subtitle {
+    background-color: #FFF;
+    font-size: 1.5em;
+    padding: 0px 0;
+    margin: 5px 0;
+    border: #ccc solid 1px;
+    border-width: 1px 0;
+    vertical-align: center;
+}
+
+#home h1 {
+    font-size: 5em;
+}
+
+#home p {
+    font-size: 1.2em;
+}
+
+#home ul {
+    padding-top: 10px;
+}
+
+#home li {
+    list-style-type: circle;
+    display: inline-block;
+    padding: 0 30px;
+    color: #000;
+}
+
+#aboutSection p, #listenSection p, #pricingSection p, #contactSection p {
+    font-size: 0.98em;
+}
+
+#pricingSection .underscore {
+    text-decoration: underline;
+}
+
+#contactSection a {
+    font-weight: bold;
+}

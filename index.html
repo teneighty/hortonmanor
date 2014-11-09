@@ -1,22 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Horton Manor</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:regular,bold' rel='stylesheet' type='text/css' />
-    <style type="text/css">
-        div {
-            color: #666;
-            font: 13px/24px "Open Sans", Arial, sans-serif;
-            margin: 100px 0;
-            text-align: center;
-            text-transform: uppercase;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/manor.css" />
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div> 
-        Horton Manor
+    <div class="section active" id="home">
+        <div>
+            <div id="banner">
+                <h1>Horton Manor</h1>
+                <div>Acoustic Guitar &amp; Vocals</div>
+            </div>
+            <ul>
+                <li>Wedding Cermeonies</li>
+                <li>Cocktail Hour</li>
+                <li>Corporate Events</li>
+                <li>Special Events</li>
+                <li>Musical Talent</li>
+            </ul>
+            <p style="color: transparent"> 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
     </div>
+    <div class="section" id="aboutSection">
+        <h1>About</h1>
+        <p> 
+            Tim and Chrissy are husband and wife who have been working on music
+            together since they were in high school. They met by doing the
+            music for their church and have been providing the music for
+            weddings and masses for over 12 years now.
+        </p> 
+        <p> 
+            Although raised in the Catholic Church Chrissy and Tim embrace all
+            religions and celebrations and are honored to provide the music for
+            any special event.
+        </p> 
+        <p> 
+            In addition to music Chrissy has had over 3 years experience
+            working as an assistant coordinator with one of San Diego’s top
+            Wedding Coordinators, Tres Chic Affairs. She understands how each
+            event is special and how vital every detail can be.
+        </p> 
+        <p> 
+            The two of them can ensure the music for event is customized to
+            your personal style. 
+        </p>
+    </div>
+    <div class="section" id="listenSection">
+        <h1>Listen</h1>
+        <p>
+            Have a special song that you want to be performed? Horton Manor can learn and
+            customize any song to fit your personal style.
+        </p>
+
+        <p>
+            Here are just a few samples of the sounds of Horton Manor.  When booking Horton
+            Manor you will have a sit down meeting where you can either give a list of the
+            songs you liked played and or they can provide a variety of selections for you
+            to chose from. 
+        </p>
+    </div>
+    <div class="section" id="pricingSection">
+        <h1>Pricing</h1>
+        <p>
+            There is nothing more intimate and personal than the sound of
+            live music.  It sets the tone for the night and is engaging to everyone in
+            attendance.
+        </p>
+        <p>
+            <span class="underscore">Prices are listed per hour </span><br />
+            0-1 Hours $300 <br />
+            $200 for every additional hour 
+        </p>
+        <p>
+            Horton Manor has state of the art equipment that can be provided to ensure you
+            have a quality sound. Horton Manor always travels with a sound technician
+            whenever necessary to ensure quality sounds throughout the entire evening. 
+        </p>
+    </div>
+    <div class="section" id="contactSection">
+        <h1>Contact</h1>
+        <p> 
+            To book Horton Manor for an event contact them at the following: 
+        </p>
+        <p>
+            EMAIL: <a href="mailto:CHRISSY@HORTONMANOR.COM">CHRISSY@HORTONMANOR.COM</a>
+        </p>
+        <p style="color: transparent"> 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <div id="menu">
+        <ul>
+            <li data-menuanchor="home"><a href="#home">Home</a></li>
+            <li data-menuanchor="about"><a href="#about">About</a></li>
+            <li data-menuanchor="listen"><a href="#listen">Listen</a></li>
+            <li data-menuanchor="pricing"><a href="#pricing">Pricing</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="subtitle"><h3>Horton Manor</h3></div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>    
+
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#subtitle').hide();
+            $.fn.fullpage({
+                anchors: ['home', 'about', 'listen', 'pricing', 'contact'],
+                scrollingSpeed: 50,
+                menu: '#menu',
+                onLeave: function(index, direction){
+                    if (index === 1) {
+                        $('#subtitle').fadeIn();
+                    }
+                },
+                afterLoad: function(anchorLink, index) {
+                    if (index === 1) {
+                        $('#subtitle').fadeOut();
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
