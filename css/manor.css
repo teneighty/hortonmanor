@@ -35,13 +35,27 @@ p {
     z-index: 10;
 }
 
-.section h1, .section p {
+.section h1, .section h2, .section p {
     width: 75%;
     min-width: 75%;
     margin: 0 auto;
 }
+.section h2 {
+    font-size: 1em;
+    padding: 0 0 10px 0;
+    text-transform: none;
+    font-weight: bold;
+}
 .section p {
     padding: 0 0 20px 0;
+}
+.samples {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+.samples div {
+    display: inline-block;
+    padding: 0;
 }
 #menu {
     text-transform: uppercase;
